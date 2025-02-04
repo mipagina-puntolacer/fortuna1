@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORTUNA</title>
+    <link rel="icon" type="Image/jpg" href="img/logo.png">
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4caf50, #2e7d32);
+            color: white;
+            padding: 20px;
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(30, 32, 30, 0.705);
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 40%; /* Reducido al 50% */
+            max-width: 100px; /* Máximo de 150px */
+            height: auto;
+        }
+        
+        .container {
+            margin-top: 120px;
+            padding: 0 10px;
+        }
+        
+        img {
+            margin-top: 6px;
+            width: 90%;
+            max-width: 500px;
+            height: auto;
+            border: 5px solid #11b811;
+            border-radius: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .button {
+            display: block;
+            margin: 15px auto 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: linear-gradient(to right, #66bb6a, #388e3c);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+            width: 80%;
+            max-width: 200px;
+        }
+        
+        .button:hover {
+            background: linear-gradient(to right, #81c784, #2e7d32);
+        }
+        
+        .description {
+            margin-top: 15px;
+            font-size: 16px;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+        
+        .scroll-down {
+            height: 50px;
+            width: 50px;
+            position: fixed;
+            right: 20px;
+            bottom: 50px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .scroll-down:hover {
+            background: rgba(27, 219, 9, 0.527);
+        }
+    </style>
+    <script>
+        function scrollToBottom() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img src="img/logo.png" alt="Logo" class="logo">
+    </div>
+    <div class="container">
+        <img src="img/0412-5594292.png" alt="Imagen de ejemplo">
+        <a href="https://chat.whatsapp.com/I7cC3iheqpwJKfBKQJnco6" class="button">Unirme</a>
+        <p class="description">
+            SE REALIZARAN DOS DINAMICAS AL DIA <br>
+            1) HORARIOS <br>
+            1️⃣ 8AM A 1PM <br>
+            2️⃣ 4PM A 7PM <br><br>
+            2) LA PRIMERA DINAMICA CONSTA DE 6 ANIMALES VALIDOS PARA LAS LOTERIAS LOTTO ACTIVO, LA GRANJITA Y SELVA PLUS, 
+            LA SEGUNDA SERA DE 4 ANIMALES VALIDOS PARA LAS MISMAS LOTERIAS <br><br>
+            3) EL PRECIO DE AMBAS DINAMICAS SERA DE 30 BS <br><br>
+            4) DINAMICAS CON NUMEROS REPETIDOS SE LE CAMBIARÁ POR EL ANTERIOR O SIGUIENTE SIEMPRE Y CUANDO NO SALGA EN EL PRIMER SORTEO. 
+            COMBINACIONES CON NÚMEROS FUERA DE LOS 38 ANIMALITOS QUEDA NULA.
+        </p>
+    </div>
+    <button class="scroll-down" onclick="scrollToBottom()">↓</button>
+</body>
+</html>
