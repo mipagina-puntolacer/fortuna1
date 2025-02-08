@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FORTUNA</title>
-    <link rel="icon" type="Image/jpg" href="img/logo.png">
+    <link rel="icon" type="Image/jpg" href="logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
             text-align: center;
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #4caf50, #2e7d32);
-            color: black;
+            background: linear-gradient(to right, #112953, #07152e);
+            
             padding: 20px;
         }
         
@@ -20,14 +20,14 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(30, 32, 30, 0.705);
+            background: linear-gradient(to right, #3c6ab9d7, #09214b);
             padding: 10px 0;
             text-align: center;
         }
         
         .logo {
             width: 40%;
-            max-width: 100px;
+            max-width: 80px;
             height: auto;
         }
         
@@ -41,7 +41,7 @@
             width: 90%;
             max-width: 500px;
             height: auto;
-            border: 5px solid #11b811;
+            border: 5px solid #07152e;
             border-radius: 15px;
             display: block;
             margin-left: auto;
@@ -53,29 +53,113 @@
             margin: 15px auto 0;
             padding: 10px 20px;
             font-size: 25px;
-            background: linear-gradient(to right, #66bb6a, #388e3c);
+            background: linear-gradient(to right, #164ca8, #012c5c);
             color: rgb(253, 253, 253);
             text-decoration: none;
             border-radius: 8px;
             transition: 0.3s;
             width: 80%;
-            max-width: 200px;
+            max-width: 2000px;
+            animation: blink 1.5s infinite;
         }
         
         .button:hover {
-            background: linear-gradient(to right, #81c784, #2e7d32);
+            background: linear-gradient(to right, #3c6ab9, #07152e);
         }
-        
-        .description {
-            margin-top: 15px;
-            font-size: 16px;
-            max-width: 90%;
+
+        .description-container {
+            background-color: #07152e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            max-width: 8000px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        .description {
+            
+            font-size: 16px;
             line-height: 1.5;
             color: rgb(248, 245, 245);
+            margin-top: 20px;
         }
-        
+
+        .icons {
+            font-size: 24px;
+            color: #0c1744;
+            margin-right: 8px;
+        }
+
+        .icon-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .icon-container span {
+            font-size: 28px;
+            margin-right: 8px;
+
+        }
+
+        .icon-container div {
+            text-align: left;
+            max-width: 300px;
+            margin: 0 10px;
+        }
+
+        .detalle {
+            color: aliceblue;
+            background: linear-gradient(to right, #00439b, #07152e);
+            margin-left: 400px;
+            margin-right: 400px;
+            border-radius: 80px;
+            animation: blink 1.5s infinite;
+            margin-top: 100px;
+            margin-bottom: -80px;
+        }
+
+        .container .icon-container.premio-1 {
+            background-color: #07152e; /* Premio 1 - color dorado */
+            margin-top: 150px;
+            margin-right: 500px;
+            
+        }
+
+        .container .icon-container.premio-2 {
+            background-color: #07152e; /* Premio 2 - color azul */
+            margin-left: 500px;
+            
+        }
+
+        .container .icon-container.fecha {
+            background-color: #07152e; /* Fecha - color rojo */
+            margin-right: 500px;
+            
+        }
+
+        .container .icon-container.hora {
+            background-color: #07152e; /* Horario - color morado */
+            margin-left: 500px;
+            
+        }
+
+        .container .icon-container:hover{
+            background: linear-gradient(to right, #3c6ab9, #07152e);
+            
+        }
+
+        /* Añadido espacio entre contenedores de íconos */
+        .icon-container + .icon-container {
+            margin-top: 20px;
+        }
+
         @keyframes blink {
             0% { opacity: 1; }
             50% { opacity: 0.5; }
@@ -86,7 +170,7 @@
             position: fixed;
             right: 20px;
             bottom: 50px;
-            background: #25D366;
+            background: linear-gradient(to right, #3c6ab9, #09214b);
             color: white;
             border: none;
             padding: 15px;
@@ -109,31 +193,150 @@
         }
 
         .whatsapp-button:hover {
-            background: #1ebe5d;
+            background: #11395f;
+        }
+
+        /* Estilo para la ventana emergente */
+        .popup {
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 20px;
+            z-index: 1000;
+            text-align: center;
+            display: none;
+        }
+
+        .popup .counter {
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .popup .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="img/logo.png" alt="Logo" class="logo">
+        <img src="logo.png" alt="Logo" class="logo">
     </div>
     <div class="container">
-        <img src="img/fortuna.jpg" alt="Imagen de ejemplo">
-        <a href="https://chat.whatsapp.com/I7cC3iheqpwJKfBKQJnco6" class="button">Unirme Al Grupo</a>
-        <p class="description">
-            SE REALIZARAN DOS DINAMICAS AL DIA <br>
-            1) HORARIOS <br>
-            1️⃣ 8AM A 1PM <br>
-            2️⃣ 4PM A 7PM <br><br>
-            2) LA PRIMERA DINAMICA CONSTA DE 6 ANIMALES VALIDOS PARA LAS LOTERIAS LOTTO ACTIVO, LA GRANJITA Y SELVA PLUS, 
-            LA SEGUNDA SERA DE 4 ANIMALES VALIDOS PARA LAS MISMAS LOTERIAS <br><br>
-            3) EL PRECIO DE AMBAS DINAMICAS SERA DE 30 BS <br><br>
-            4) DINAMICAS CON NUMEROS REPETIDOS SE LE CAMBIARÁ POR EL ANTERIOR O SIGUIENTE SIEMPRE Y CUANDO NO SALGA EN EL PRIMER SORTEO. 
-            COMBINACIONES CON NÚMEROS FUERA DE LOS 38 ANIMALITOS QUEDA NULA.
-        </p>
+        <img src="fortuna.jpg" alt="Imagen de ejemplo">
+       
+
+        <!-- Contenedor para la descripción -->
+        <div class="description-container">
+             <a href="https://chat.whatsapp.com/I7cC3iheqpwJKfBKQJnco6" class="button">Unirme Al Grupo</a>
+            <p class="description">
+                SE REALIZARAN DOS DINAMICAS AL DIA <br>
+                1) HORARIOS <br>
+                1️⃣ 8AM A 1PM <br>
+                2️⃣ 4PM A 7PM <br><br>
+                2) LA PRIMERA DINAMICA CONSTA DE 6 ANIMALES VALIDOS PARA LAS LOTERIAS LOTTO ACTIVO, LA GRANJITA Y SELVA PLUS, 
+                LA SEGUNDA SERA DE 4 ANIMALES VALIDOS PARA LAS MISMAS LOTERIAS <br><br>
+                3) EL PRECIO DE AMBAS DINAMICAS SERA DE 30 BS <br><br>
+                4) DINAMICAS CON NUMEROS REPETIDOS SE LE CAMBIARÁ POR EL ANTERIOR O SIGUIENTE SIEMPRE Y CUANDO NO SALGA EN EL PRIMER SORTEO. 
+                COMBINACIONES CON NÚMEROS FUERA DE LOS 38 ANIMALITOS QUEDA NULA. <br><br>
+            </p>
+            <a href="https://chat.whatsapp.com/I7cC3iheqpwJKfBKQJnco6" class="button">Unirme Al Grupo</a>
+        </div>
+
+        <div class="detalle">
+            <h1>Detalle</h1>
+        </div>
+
+        <!-- Contenedores para los premios, fecha y hora -->
+        <div class="icon-container premio-1">
+            <span class="icons">🏆</span>
+            <div><strong>Premio 1:</strong> 2 BERA BRF 0KM 2025</div>
+        </div>
+        
+        <div class="icon-container premio-2">
+            <span class="icons">💵</span>
+            <div><strong>Premio 2:</strong> 200$ en efectivo, entrega inmediata</div>
+        </div>
+
+        <div class="icon-container fecha">
+            <span class="icons">📅</span>
+            <div><strong>Fecha del evento:</strong> 20/03/2025</div>
+        </div>
+
+        <div class="icon-container hora">
+            <span class="icons">⏰</span>
+            <div><strong>Hora del evento:</strong> 10 PM</div>
+        </div>
     </div>
+    
+     <!-- Ventana emergente para la cuenta regresiva -->
+     <div id="popup" class="popup">
+        <span class="close-btn" id="closePopup">×</span>
+        Se redireccionará en <span id="counter" class="counter">10</span> segundos
+    </div>
+
     <a href="https://chat.whatsapp.com/I7cC3iheqpwJKfBKQJnco6" class="whatsapp-button">
         <img src="img/descarga (4).jpeg" alt="WhatsApp">
     </a>
+
+    <script>
+        // Mostrar la ventana emergente después de 5 segundos
+        window.onload = function() {
+            setTimeout(function() {
+                var popupElement = document.getElementById("popup");
+                var countdown = 10;
+                var counterElement = document.getElementById("counter");
+
+                // Mostrar el popup
+                popupElement.style.display = "block";
+
+                // Iniciar la cuenta regresiva
+                var countdownInterval = setInterval(function() {
+                    countdown--;
+                    counterElement.textContent = countdown;
+
+                    if (countdown === 0) {
+                        clearInterval(countdownInterval);
+                        window.location.href = "https://chat.whatsapp.com/I7cC3iheqpwJKfBKQJnco6"; // Redirección al grupo
+                    }
+                }, 1000);
+
+            }, 5000); // Esperar 5 segundos antes de mostrar el popup
+
+            // Cerrar la ventana emergente cuando se haga clic en la "X"
+            document.getElementById("closePopup").onclick = function() {
+                document.getElementById("popup").style.display = "none";
+
+                // Mostrar el popup nuevamente después de 10 segundos
+                setTimeout(function() {
+                    var popupElement = document.getElementById("popup");
+                    var countdown = 10;
+                    var counterElement = document.getElementById("counter");
+
+                    popupElement.style.display = "block";
+
+                    // Iniciar la cuenta regresiva
+                    var countdownInterval = setInterval(function() {
+                        countdown--;
+                        counterElement.textContent = countdown;
+
+                        if (countdown === 0) {
+                            clearInterval(countdownInterval);
+                            window.location.href = "https://chat.whatsapp.com/I7cC3iheqpwJKfBKQJnco6"; // Redirección al grupo
+                        }
+                    }, 1000);
+                }, 10000); // Aparecerá nuevamente después de 10 segundos
+            };
+        };
+    </script>
 </body>
 </html>
